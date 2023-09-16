@@ -1,7 +1,12 @@
 <div class="row">
   <div class="col-6">
-    <p>Task-list</p>
-    <li>{{currentTask}}</li>
+    <!--    <p>Task-list</p>-->
+    <ul>
+      <h3>{{ getCurrentDateWithDay() }}</h3>
+    </ul>
+    <div class="col-8 mt-5   mb-0 mt-5 d-flex justify-content-center align-items-center">
+      <img alt="item" [src]="itemImageUrl" [style.width.px]="imageWidth">
+    </div>
     <table class="table table-striped">
       <thead>
       <tr>

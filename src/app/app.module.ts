@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { BindingComponent } from './binding/binding.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
+import {FormsModule} from "@angular/forms";
 // import {FormsModule} from "@angular/forms";
 // import {HttpClientModule} from "@angular/common/http";
 // in declarations we tell Angular to scan these components
@@ -21,7 +22,7 @@ import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
     SubmitDialogComponent,
   ],
   imports: [
-    BrowserModule,MatDialogModule
+    BrowserModule,MatDialogModule, FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

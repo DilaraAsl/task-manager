@@ -9,7 +9,8 @@ import {DialogService} from "../dialog.service";
 export class TaskListComponent {
 
   currentTask: string = 'My Tasks';
-
+  itemImageUrl = '../assets/taskList.png';
+  imageWidth=100;
   tasks: string[] = [];
   isActive:boolean=true;
   constructor(private dialogService: DialogService){
@@ -26,6 +27,20 @@ export class TaskListComponent {
     this.isActive=!this.isActive;
     console.log(this.isActive);
   }
+
+  getCurrentDateWithDay(): string {
+    const options: Intl.DateTimeFormatOptions = {
+      weekday: 'long',
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'
+    };
+    const currentDate = new Date();
+    return currentDate.toLocaleDateString('en-US', options);
+  }
+
+
+
 }
 
 

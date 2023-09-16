@@ -1,14 +1,62 @@
-<div class="row">
-  <div class="col-3">
-    <p>Task Details</p></div>
-  <div class="col-3">
-    <button class="btn btn-secondary" (mouseover)="onMouseOver()">Check Details</button>
+<!--<div class="row">-->
+<!--  <div class="col-3">-->
+<!--    <p>Task Details</p></div>-->
+<!--  <div class="col-3">-->
+<!--    <div class="toast show">-->
+<!--      <button id="toastbtn" class="btn btn-secondary mt-5" (click)="showToast()">Show Toast</button>-->
+
+<!--      <div class="toast-header mt5">-->
+<!--        Toast Header-->
+<!--        <button type="button" class="btn-close" data-bs-dismiss="toast"></button>-->
+<!--      </div>-->
+<!--      <div class="toast-body">-->
+<!--        Some text inside the toast body-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <button class="btn btn-secondary mt-5" (mouseover)="onMouseOver()">Check Details</button>-->
+<!--  </div>-->
+<!--  <div class="col-3">-->
+<!--&lt;!&ndash;    $event captures the input value&ndash;&gt;-->
+<!--    <input class="mt-5" (input)="onInputChange($event)">-->
+<!--    <br>-->
+<!--    <br>-->
+<!--    <p>{{currentTaskDetails}}</p>-->
+<!--  </div>-->
+<!--</div>-->
+
+<!--<script>-->
+<!--  document.getElementById("toastbtn").onclick = function() {-->
+<!--    let toastEl = document.querySelector('.toast');-->
+<!--    let toast = new bootstrap.Toast(toastEl);-->
+<!--    toast.show();-->
+<!--  }-->
+<!--</script>-->
+<div class="col-6">
+  <div class="toast" id="myToast">
+    <div class="toast-header"> Congratulations
+      <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+    <div class="toast-body">
+     Hurray!!! You have submitted your task!!!
+    </div>
   </div>
-  <div class="col-3">
-<!--    $event captures the input value-->
+  <button class="btn btn-info" (click)="showToast()">Toast</button>
+</div>
+<div class="row">
+  <div class="col-6">
+<!--    <p>Task Details</p>-->
     <input class="mt-5" (input)="onInputChange($event)">
     <br>
     <br>
-    <p>{{currentTaskDetails}}</p>
+    <p>{{ currentTaskDetails }}</p>
+        <h4>Provide Task Details Below:</h4>
+    <input class="form-control custom-textarea" type="textarea" [(ngModel)]="inputString">
+<!--    <input class="form-control input-group mb-3 mt-3" type="textarea" [(ngModel)]="inputString">-->
+    <button class="btn btn-primary mt-3" (click)="onSubmitText(inputString)">Submit Text</button>
+    <br>
+    <br>
+    <p>{{ inputString }}</p>
   </div>
 </div>
+
+
