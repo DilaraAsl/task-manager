@@ -1,0 +1,14 @@
+<div class="row">
+  <div class="col-3">
+    <p>Task Details</p></div>
+  <div class="col-3">
+    <button class="btn btn-secondary" (mouseover)="onMouseOver()">Check Details</button>
+  </div>
+  <div class="col-3">
+<!--    $event captures the input value-->
+    <input class="mt-5" (input)="onInputChange($event)">
+    <br>
+    <br>
+    <p>{{currentTaskDetails}}</p>
+  </div>
+</div>
