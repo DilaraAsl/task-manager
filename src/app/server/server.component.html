@@ -1,1 +1,11 @@
-<p>The server component works!</p>
+<!--Interpolation  retrieve field or method() value"-->
+<p>The server with ID: {{serverId}} is {{getServerStatus()}}</p>
+<button id="server-btn" class="btn btn-primary" [disabled]="!allowNewServer">New Server</button>
+<p [innerText]="allowNewServer"></p>
+<button class="btn btn-primary" *ngIf="!allowNewServer">New Server</button>
+
+<input type="text" class="form-control" [(ngModel)]="serverCreationStatus" name="serverStatus">
+<button class="btn btn-dark" (click)="onCreateServer(serverCreationStatus)">
+  Add Server
+</button>
+

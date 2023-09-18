@@ -9,5 +9,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./server.component.css']
 })
 export class ServerComponent {
+  serverId: number=10;
+  serverStatus: string = "offline";
+  allowNewServer=false;
+  serverCreationStatus="No server was created";
+  getServerStatus(){
+    return this.serverStatus;
+  }
+
+  constructor() {
+    setTimeout(()=>{this.allowNewServer=true;},2000)
+  }
+
+  onCreateServer(serverCreationStatus:string){
+    this.serverCreationStatus=serverCreationStatus;
+  }
 
 }

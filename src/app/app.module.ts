@@ -9,6 +9,9 @@ import { BindingComponent } from './binding/binding.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { SubmitDialogComponent } from './submit-dialog/submit-dialog.component';
 import {FormsModule} from "@angular/forms";
+import { DirectivesComponent } from './directives/directives.component';
+import { WarningAlertComponent } from './warning-alert/warning-alert.component';
+import { SuccessAlertComponent } from './success-alert/success-alert.component';
 // import {FormsModule} from "@angular/forms";
 // import {HttpClientModule} from "@angular/common/http";
 // in declarations we tell Angular to scan these components
@@ -20,6 +23,9 @@ import {FormsModule} from "@angular/forms";
     ServerComponent,
     BindingComponent,
     SubmitDialogComponent,
+    DirectivesComponent,
+    WarningAlertComponent,
+    SuccessAlertComponent,
   ],
   imports: [
     BrowserModule,MatDialogModule, FormsModule

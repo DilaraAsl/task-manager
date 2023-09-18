@@ -8,7 +8,9 @@
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" routerLink="/bindings" >Binding</a>
+            <a class="nav-link" aria-current="page" routerLink="/directives" >Directives</a>
+            <a class="nav-link" aria-current="page" routerLink="/task-list" >Task List</a>
+            <a class="nav-link" aria-current="page" routerLink="/task-detail" >Task Details</a>
           </li>
         </ul>
       </div>
@@ -34,9 +36,12 @@
 <!--            <app-task-list></app-task-list>-->
           </div>
           <div class="col-8 mt-5   mb-0 mt-5">
+            <app-warning-alert></app-warning-alert>
+            <app-success-alert></app-success-alert>
 <!--            <img alt="item" [src]="itemImageUrl"  [style.width.px]="imageWidth">-->
             <app-task-list></app-task-list>
             <app-task-detail></app-task-detail>
+            <app-directives></app-directives>
           </div>
         </div>
       </div>
