@@ -1,0 +1,5 @@
+<div id="alertBox" class="alert alert-success alert-dismissible" [hidden]="!showAlert">
+  <button type="button" class="btn-close" (click)="closeAlert()"></button>
+  <strong>Success!</strong> This alert box could indicate a successful or positive action.
+</div>
+<button id="showAlertButton" class="btn btn-success" (click)="showAlert=true">Show Alert</button>

@@ -1,0 +1,21 @@
+
+<button class="btn btn-warning" (click)="incrementClicks()">Display Details</button>
+<p [hidden]="!secretParagraph">Secret password: tuna</p>
+<p>No of clicks:</p>
+<span *ngFor="let click of buttonClicks;" [ngStyle]="{
+  'background-color': click > 4 ? 'blue': 'white'
+}" [ngClass]="{'clickLog': click > 4}">{{ click }}, </span>
+
+<p>Date clicked:</p>
+<span *ngFor="let date of dates; let i = index;">
+  <ul *ngIf="i > 4 else elseBlock" [ngStyle]="{
+    'background-color': 'blue'
+  }" [ngClass]="{'clickLog': true}">
+    <li>{{ i + 1 }} {{ date }}</li>
+  </ul>
+<!--  <ng-container *ngIf="i <= 4">-->
+<!--    {{ i + 1 }} {{ date }}-->
+<!--  </ng-container>-->
+<ng-template #elseBlock> {{ i + 1 }}. {{ date }}</ng-template>
+</span>
+

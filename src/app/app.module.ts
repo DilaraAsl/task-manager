@@ -25,7 +25,7 @@ import { SuccessAlertComponent } from './success-alert/success-alert.component';
     SubmitDialogComponent,
     DirectivesComponent,
     WarningAlertComponent,
-    SuccessAlertComponent,
+    SuccessAlertComponent
   ],
   imports: [
     BrowserModule,MatDialogModule, FormsModule

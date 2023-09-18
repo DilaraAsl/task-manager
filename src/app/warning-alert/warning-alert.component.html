@@ -1,0 +1,9 @@
+<div>
+  <a href="#" (click)="showAlert =!showAlert">Show Warning</a>
+</div>
+<div class="alert alert-warning alert-dismissible fade show" *ngIf="showAlert">
+  <strong>Warning!</strong> You should <a href="#" class="alert-link" (click)="showAlert = false">This is a warning message</a>
+  <button type="button" class="btn-close" (click)="showAlert = false"></button>
+</div>
+
+
